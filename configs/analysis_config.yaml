@@ -1,0 +1,4 @@
+outliers:
+  iqr_multiplier: 1.5
+ratios:
+  require_positive_fare: true

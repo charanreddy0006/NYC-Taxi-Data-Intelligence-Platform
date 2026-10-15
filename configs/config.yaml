@@ -1,0 +1,13 @@
+project:
+  name: nyc-taxi-data-intelligence
+  environment: development
+paths:
+  raw_dir: data/raw
+  reports_dir: reports
+  logs_dir: logs
+dataset:
+  name: taxis
+  filename: taxis.csv
+reporting:
+  generate_charts: true
+  top_routes_limit: 20

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nyc-taxi-numpy-pandas-analytics"
+version = "1.0.0"
+description = "Production-style NumPy and pandas learning project using Seaborn's taxi dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0", "seaborn>=0.13", "matplotlib>=3.7", "PyYAML>=6.0"]
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4", "jupyter>=1.0", "ipykernel>=6"]
+[project.scripts]
+taxi-analytics = "taxi_analytics.cli:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+[tool.ruff]
+line-length = 100
+target-version = "py310"

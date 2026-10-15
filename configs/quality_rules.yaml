@@ -1,0 +1,4 @@
+required_columns: [pickup, dropoff, distance, fare, tip, total]
+warning_thresholds:
+  max_trip_duration_minutes: 360
+  max_average_speed_mph: 100
